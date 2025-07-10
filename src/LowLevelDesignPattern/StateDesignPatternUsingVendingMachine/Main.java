@@ -21,9 +21,9 @@ public class Main {
             System.out.println("|");
 
             State vendingState = vendingMachine.getVendingMachineState();
-            vendingState.clickOnPressInsertCoinButton(vendingMachine);
+            vendingState.clickOnPressInsertCoinButton(vendingMachine); // IDLE state
 
-            vendingState = vendingMachine.getVendingMachineState();
+            vendingState = vendingMachine.getVendingMachineState(); // HAS MONEY STATE
             vendingState.insertCoin(vendingMachine, Coin.NICKEL);
             vendingState.insertCoin(vendingMachine, Coin.QUARTER);
             // vendingState.insertCoin(vendingMachine, Coin.NICKEL);
@@ -33,7 +33,7 @@ public class Main {
             System.out.println("|");
             vendingState.clickOnSelectProductButton(vendingMachine);
 
-            vendingState = vendingMachine.getVendingMachineState();
+            vendingState = vendingMachine.getVendingMachineState(); // selection state
             vendingState.chooseProduct(vendingMachine, 102);
 
             displayInventory(vendingMachine);
@@ -47,6 +47,7 @@ public class Main {
     }
 
     private static void fillUpInventory(VendingMachine vendingMachine){
+
         ItemShelf[] slots = vendingMachine.getInventory().getInventory();
         for (int i = 0; i < slots.length; i++) {
             Item newItem = new Item();

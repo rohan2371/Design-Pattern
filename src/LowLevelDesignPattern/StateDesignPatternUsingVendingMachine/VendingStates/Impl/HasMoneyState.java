@@ -8,6 +8,7 @@ import LowLevelDesignPattern.StateDesignPatternUsingVendingMachine.VendingStates
 import java.util.List;
 
 public class HasMoneyState implements State {
+
     public HasMoneyState(){
         System.out.println("Currently Vending machine is in HasMoneyState");
     }

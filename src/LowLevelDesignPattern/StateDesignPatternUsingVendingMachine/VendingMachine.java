@@ -1,5 +1,6 @@
 package LowLevelDesignPattern.StateDesignPatternUsingVendingMachine;
 
+import LowLevelDesignPattern.StateDesignPatternUsingVendingMachine.VendingStates.Impl.IdleState;
 import LowLevelDesignPattern.StateDesignPatternUsingVendingMachine.VendingStates.State;
 
 import java.util.ArrayList;
@@ -10,6 +11,11 @@ public class VendingMachine {
    private Inventory inventory;
    private List<Coin> coinList;
 
+   public VendingMachine(){
+       vendingMachineState = new IdleState();
+       inventory = new Inventory(10);
+       coinList = new ArrayList<>();
+   }
     public State getVendingMachineState() {
         return vendingMachineState;
     }
