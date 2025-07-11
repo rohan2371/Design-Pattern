@@ -10,8 +10,8 @@ public class Main {
         directory.add(movie1);
 
         Directory movieDirectory = new Directory("comedyMovie");
-        File movie2 = new File("Avengers End game");
-        movieDirectory.add(movie1);
+        File movie2 = new File("Funny");
+        movieDirectory.add(movie2);
 
         directory.add(movieDirectory);
 
